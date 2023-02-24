@@ -15,59 +15,19 @@ python3 bspghost.py
 
 # SXHKD 
 
+terminal emulator = super + Return 
 
- terminal emulator
-super + Return
-	kitty 
+program launcher = super + d
 
- program launcher
-super + d
-	bash ~/.config/polybar/pwidgets/scripts/launcher.sh 
+quit/restart bspwm = super + alt + {q,r}
 
- make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
+close and kill = super + {_,shift + }w
+	
+swap the current node and the biggest window = super + g
 
+set the window state = super + {t,shift + t,s,f}
+tiled,pseudo_tiled,floating,fullscreen
 
-bspwm hotkeys
-
- quit/restart bspwm
-super + alt + {q,r}
-	bspc {quit,wm -r}
-
- close and kill
-super + {_,shift + }w
-	bspc node -{c,k}
-
- alternate between the tiled and monocle layout
-super + m
-	bspc desktop -l next
-
- send the newest marked node to the newest preselected node
-super + y
-	bspc node newest.marked.local -n newest.!automatic.local
-
- swap the current node and the biggest window
-super + g
-	bspc node -s biggest.window
-
-
- state/flags
-
- set the window state
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
-
- focus/swap
-
- focus the node in the given direction
-super + shift + {Left,Down,Up,Right}
-	bspc node -{f,s} {west,south,north,east}
-
- move/resize
-
- move a floating window
-super + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
+move a floating window = super + {Left,Down,Up,Right}
 
 
