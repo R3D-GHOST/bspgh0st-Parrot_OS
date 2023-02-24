@@ -11,23 +11,3 @@ cd bspgh0st-Parrot_OS/
 
 
 python3 bspghost.py
-
-
-# SXHKD 
-
-terminal emulator = super + Return 
-
-program launcher = super + d
-
-quit/restart bspwm = super + alt + {q,r}
-
-close and kill = super + {_,shift + }w
-	
-swap the current node and the biggest window = super + g
-
-set the window state = super + {t,shift + t,s,f}
-tiled,pseudo_tiled,floating,fullscreen
-
-move a floating window = super + {Left,Down,Up,Right}
-
-
