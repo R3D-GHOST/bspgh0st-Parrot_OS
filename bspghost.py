@@ -72,7 +72,7 @@ def bspwm():
     os.system("chmod +x ~/.config/bspwm/bspwmrc")
     os.system("cp examples/sxhkdrc ~/.config/sxhkd/")
     os.system("sudo rm -r contrib/ doc/ examples/ src/ grab.o helpers.o LICENSE Makefile parse.o README.md Sourcedeps sxhkd sxhkd.o types.o VERSION")
-    os.system("sudo apt install kitty")
+    os.system("sudo apt install kitty ; sudo apt install zsh")
     print("[+] Instalacion Polybar Rofi Picom... Finalizada")
 #menu
 os.system('clear')
